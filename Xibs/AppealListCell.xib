@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="qGu-KT-Mor" customClass="AppealListCell" customModule="Swimmy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="380"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lLD-oi-4tP">
+                <rect key="frame" x="0.0" y="0.0" width="324" height="380"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1615" translatesAutoresizingMaskIntoConstraints="NO" id="geY-qn-VRZ">
+                        <rect key="frame" x="0.0" y="15" width="324" height="280"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="280" id="AXV-p5-7qa"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kidou" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-9k-I9q">
+                        <rect key="frame" x="10" y="305" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="hAK-9k-I9q" secondAttribute="height" multiplier="1:1" id="kt6-Yn-A9f"/>
+                            <constraint firstAttribute="width" constant="40" id="lQ0-2H-93o"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ViX-ge-1KZ">
+                        <rect key="frame" x="60" y="305" width="254" height="61"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトルがここにはいります" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CU3-hX-rHk">
+                                <rect key="frame" x="0.0" y="0.0" width="254" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="説明文がここにはります" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAv-LL-gmE">
+                                <rect key="frame" x="0.0" y="29" width="254" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yEC-Ep-9I2">
+                                <rect key="frame" x="0.0" y="57" width="254" height="4"/>
+                            </progressView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ViX-ge-1KZ" firstAttribute="top" secondItem="geY-qn-VRZ" secondAttribute="bottom" constant="10" id="7W9-6T-98y"/>
+                    <constraint firstItem="hAK-9k-I9q" firstAttribute="top" secondItem="geY-qn-VRZ" secondAttribute="bottom" constant="10" id="JF6-9f-fd4"/>
+                    <constraint firstAttribute="trailing" secondItem="ViX-ge-1KZ" secondAttribute="trailing" constant="10" id="a3A-VG-HR6"/>
+                    <constraint firstItem="geY-qn-VRZ" firstAttribute="leading" secondItem="lLD-oi-4tP" secondAttribute="leading" id="bdu-Tc-M5b"/>
+                    <constraint firstItem="ViX-ge-1KZ" firstAttribute="leading" secondItem="hAK-9k-I9q" secondAttribute="trailing" constant="10" id="cXf-Ng-Aba"/>
+                    <constraint firstItem="geY-qn-VRZ" firstAttribute="top" secondItem="lLD-oi-4tP" secondAttribute="top" constant="15" id="iUI-JC-6yC"/>
+                    <constraint firstItem="hAK-9k-I9q" firstAttribute="leading" secondItem="lLD-oi-4tP" secondAttribute="leading" constant="10" id="oUC-pK-F2q"/>
+                    <constraint firstAttribute="trailing" secondItem="geY-qn-VRZ" secondAttribute="trailing" id="xCX-qu-Zss"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="324" height="380"/>
+            <connections>
+                <outlet property="dateLabel" destination="qAv-LL-gmE" id="2a8-5v-O3d"/>
+                <outlet property="mainImageView" destination="geY-qn-VRZ" id="UjW-yK-cui"/>
+                <outlet property="profileImage" destination="hAK-9k-I9q" id="KHw-mY-3yi"/>
+                <outlet property="progressLabel" destination="yEC-Ep-9I2" id="R7q-dy-xaU"/>
+                <outlet property="titleLabel" destination="CU3-hX-rHk" id="x9G-ve-Ahp"/>
+            </connections>
+            <point key="canvasLocation" x="178.2608695652174" y="93.080357142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="IMG_1615" width="4032" height="3024"/>
+        <image name="kidou" width="3024" height="4032"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w9j-Aj-6i7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ZdO-VN-3uS">
+            <objects>
+                <navigationController id="w9j-Aj-6i7" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hSb-Bp-Vso">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jLp-YP-wj2" kind="relationship" relationship="rootViewController" id="bnd-Rf-H71"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZD-il-OtC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-836" y="112"/>
+        </scene>
+        <!--Swimmy-->
+        <scene sceneID="b3t-JD-3Ep">
+            <objects>
+                <viewController storyboardIdentifier="Search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jLp-YP-wj2" customClass="SearchViewController" customModule="Swimmy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5WN-5g-PHa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="名前や人物、地域などで検索してみよう" translatesAutoresizingMaskIntoConstraints="NO" id="86H-iz-Ozx">
+                                <rect key="frame" x="0.0" y="89" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vil-8F-OzE">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChoiceTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celledId" rowHeight="100" id="3in-Ln-2G4" customClass="ChoiceTableViewCell" customModule="Swimmy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3in-Ln-2G4" id="zkB-Vf-yAN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lxk-mF-PQF">
+                                                    <rect key="frame" x="15" y="5" width="100" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="OsI-vu-jd2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここにはタイトルが入ります" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e2-vG-2PW">
+                                                    <rect key="frame" x="125" y="16" width="259" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="GQG-jF-MHt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lxk-mF-PQF" firstAttribute="leading" secondItem="zkB-Vf-yAN" secondAttribute="leading" constant="15" id="02u-kO-ONj"/>
+                                                <constraint firstItem="2e2-vG-2PW" firstAttribute="leading" secondItem="lxk-mF-PQF" secondAttribute="trailing" constant="10" id="CAs-t7-cVz"/>
+                                                <constraint firstItem="2e2-vG-2PW" firstAttribute="top" secondItem="zkB-Vf-yAN" secondAttribute="topMargin" constant="5" id="Uaa-Ko-6YP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2e2-vG-2PW" secondAttribute="trailing" constant="10" id="bp9-Mc-oit"/>
+                                                <constraint firstAttribute="bottom" secondItem="lxk-mF-PQF" secondAttribute="bottom" constant="5" id="dck-q9-1Y6"/>
+                                                <constraint firstItem="lxk-mF-PQF" firstAttribute="top" secondItem="zkB-Vf-yAN" secondAttribute="top" constant="5" id="ggd-kq-Eek"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="choiceImage" destination="lxk-mF-PQF" id="RS3-rA-vNy"/>
+                                            <outlet property="choiceTitle" destination="2e2-vG-2PW" id="fVl-qa-Qgy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gKO-Zl-UbP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vil-8F-OzE" firstAttribute="leading" secondItem="gKO-Zl-UbP" secondAttribute="leading" id="Hi5-HY-xIs"/>
+                            <constraint firstAttribute="bottom" secondItem="Vil-8F-OzE" secondAttribute="bottom" id="M3Y-iP-gRz"/>
+                            <constraint firstItem="86H-iz-Ozx" firstAttribute="leading" secondItem="gKO-Zl-UbP" secondAttribute="leading" id="M6G-66-e2t"/>
+                            <constraint firstItem="Vil-8F-OzE" firstAttribute="top" secondItem="86H-iz-Ozx" secondAttribute="bottom" id="Xzd-lM-V87"/>
+                            <constraint firstItem="86H-iz-Ozx" firstAttribute="top" secondItem="gKO-Zl-UbP" secondAttribute="top" constant="1" id="Z6v-rq-3QZ"/>
+                            <constraint firstItem="Vil-8F-OzE" firstAttribute="trailing" secondItem="gKO-Zl-UbP" secondAttribute="trailing" id="lYo-wi-UUm"/>
+                            <constraint firstItem="86H-iz-Ozx" firstAttribute="trailing" secondItem="gKO-Zl-UbP" secondAttribute="trailing" id="rGB-iB-3Q7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swimmy" id="9Hi-14-Jte"/>
+                    <connections>
+                        <outlet property="searchItem" destination="86H-iz-Ozx" id="6hZ-5Q-VTq"/>
+                        <outlet property="searchTable" destination="Vil-8F-OzE" id="ke7-EE-A3E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJv-X6-8jo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

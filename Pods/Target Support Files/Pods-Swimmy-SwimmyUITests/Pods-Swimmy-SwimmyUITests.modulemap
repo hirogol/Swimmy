@@ -1,0 +1,6 @@
+framework module Pods_Swimmy_SwimmyUITests {
+  umbrella header "Pods-Swimmy-SwimmyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
